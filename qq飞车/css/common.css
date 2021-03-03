@@ -1,0 +1,21 @@
+*{margin:0;padding:0;}
+ul,ol{list-style:none;}
+img{display:block;}
+a{text-decoration: none;color:#464646;}
+h1,h2,h3{font-size:16px;}
+body{font-family:Arial,'宋体';}
+.l{float:left;}
+.r{float:right;}
+.clear:after{content:"";display:block;clear:both;}
+.container{width:980px;margin:0 auto; position:relative;} /* 版心 */
+.container_fluid{width:100%;} /*通栏*/
+
+#head{background-color: antiquewhite;}
+#head .container{height:41px;}
+#head .head_logo{width:220px;height:41px;background: url(../img/logo.png) no-repeat;}
+#head .head_logo a{display: block;width:100%;height:100%;text-indent: -9999px;overflow: hidden;}
+#head .head_ad{margin-left:8px;}
+#head .head_menu{font-size: 12px;}
+#head .head_menu div{height:18px;margin-top:13px;}
+#head .head_menu .head_menu_czsh{margin-right:26px;padding-left:20px;}
+#head .head_menu .head_menu_czsh .head_menu_logo{background:url(../img/title_sprite.png) no-repeat;background-position:-36px -6px;width:18px;margin-right:5px;margin-top:0px;}
