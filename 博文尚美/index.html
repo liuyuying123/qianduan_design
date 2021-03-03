@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+
+    <style>
+        #banner{width:100%; position: relative;}
+        #banner .banner_list{width:100%;height:469px;position: relative;}
+        #banner .banner_list li{width:100%;height:100%;background:center 0 no-repeat;display: block;
+        position:absolute;left:0;top:0;opacity: 0;z-index: 1;}
+        #banner .banner_list li a{display:block;width:100%;height:100%; margin: 0 auto;}
+        #banner .banner_list .first{opacity: 1;z-index:10;}
+        #banner .banner_btn{position:absolute; bottom:19px;z-index: 20;width:100%;font-size:0;text-align: center;}
+        #banner .banner_btn li{display: inline-block;width:12px;height:12px;border:2px solid white;border-radius: 50%;box-sizing: border-box;margin-left:6px;
+        cursor:pointer;}
+        #banner .banner_btn li:active{background:white;}
+
+        /* service部分 */
+        #service{overflow: hidden;min-height:407px;}
+        #service .service_list{text-align: center;margin-top:34px;}
+        #service .service_list li{float:left;width:250px;margin:0 10px;}
+        #service .service_list li div{width:102px;height:102px;margin:0 auto;}
+        #service .service_list li:nth-of-type(1) div{background-image: url(./img/web1.png);}
+        #service .service_list li:nth-of-type(2) div{background-image: url(./img/graphic1.png);}
+        #service .service_list li:nth-of-type(3) div{background-image: url(./img/e-bussiness1.png);}
+        #service .service_list li:nth-of-type(4) div{background-image: url(./img/mail1.png);}
+        #service .service_list li h3{font-size:18px;color:#434343;line-height:36px;margin-top:25px;}
+        #service .service_list li p{font-size:14px;color:#6D6D6D;line-height:22px;}
+        
+        /* clients部分 */
+        #client{background-color:#f8f8f8;}
+        #client .container{min-height:460px;overflow: hidden;position: relative;text-align: center;}
+        #client .client_title{margin-top: 60px; text-align: center;}
+        #client .client_title h2{height:20px;line-height:20px;font-size:20px;color:#66c5b4;font-weight: normal;}
+        #client .client_title p{color:#9F9F9F;font-size:14px;line-height:25px;}
+
+        #client .item_list{position:relative;margin-top:28px;}
+        #client .item_list li{width:340px;float: left;margin:0 10px;}
+        #client .item_btn{width:176px;height:37px;background-color:#66C5B4;margin:0 auto;border-radius: 25px;line-height: 37px;text-align: center;font-size:14px;
+        margin-top:36px;}
+        #client .item_btn a{display:block;width:100%;height:100%;color:white;}
+
+
+        /* 最新资讯部分 */
+        #news{min-height:450px;overflow: hidden;}
+        #news dl{margin-top:48px;}
+        #news dt{width:234px;}
+        #news dd{width:846px;}
+        #news .news_list{width:100%;}
+        #news .news_list li{width:50%;float:left;margin-bottom:48px;}
+        #news .news_date{width:71px;height:71px;border-right:1px solid #DCDCDC;text-align: center;}
+        #news .news_date i{color:#66C5B4;font-size:39px;display: block;font-weight: bold;}
+        #news .news_date span{color:#999999;font-size:20px;line-height:36px;}
+        #news .news_text{width:310px;margin-left:20px;}
+        #news .news_text h3{font-size:14px;}
+        #news .news_text h3 a{color:#3F3F3F;}
+        #news .news_text p{color:A4AA；font-size：12px;line-height:21px;margin-top:17px;}
+
+
+
+
+
+    </style>
+</head>
+
+
+
+
+<body>
+    <!-- 网站导航头部 -->
+    <div id="head" class="container">
+            <div class="logo l">
+                <a href="#">
+                    <img src="../博文尚美/img/logo.png" alt="" title="博文尚美">
+                </a>
+            </div>
+            <ul class="nav_site r">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">客户案例</a></li>
+                <li><a href="#">服务项目</a></li>
+                <li><a href="#">新闻资讯</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+
+    </div>
+
+    <!-- banner 图片的淡入淡出需要配合js来实现 -->
+    <div id="banner" class="container_fluid">
+        <!-- 上面的图片区域，实现的思路是三张图片叠放在一起，最上面一张的透明度为1，其余两张图片的透明度为0，三张都对于父容器绝对定位，利用js来实现切换 -->
+        <ul class="banner_list"> 
+            <li class="first" style="background-image:url(./img/banner.jpg)">
+                <a href="#"></a>
+            </li>
+            <li style="background-image:url(./img/banner.jpg)">
+                <a href="#"></a>
+            </li>
+            <li style="background-image:url(./img/banner.jpg)">
+                <a href="#"></a>
+            </li>
+        </ul>
+        <!-- 图片上面的小圆圈按钮，实现的思路是对于父容器banner进行绝对定位，然后使其层级高于图片，显示在图片的上方，然后4个li设置为inline-block,
+        这样可以使得它们排成一行，并且可以设置其宽高，边框，设置圆角，就可以将li的样式变为圆圈形状。 -->
+        <ol class="banner_btn">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+
+    <!-- service部分-->
+    <!-- 在h2标签上设置背景图片，h2和p标签上设置居中，还要注意行高和间距等等，就可以了。 -->
+    <div id="service" class="container">
+        <div class="little_title">
+            <h2>服务范围</h2>
+            <p>OUR SERVICES</p>
+        </div>
+        <ul class="service_list">
+            <li>
+                <div></div>
+                <h3>1.WEB DESIGN</h3>
+                <p>企业品牌网站设计/手机网站制作<br>动画网站创意设计</p>
+            </li>
+            <li>
+                <div></div>
+                <h3>2.GRAPHIC DESIGN</h3>
+                <p>标志LOGO设计/产品宣传册设计<br>企业广告/海报设计</p>
+            </li>
+            <li>
+                <div></div>
+                <h3>3.E-BUSSINESS PLAN</h3>
+                <p>淘宝/天猫装修设计及运营推广<br>企业微博、微信营销</p>
+            </li>
+            <li>
+                <div></div>
+                <h3>4.MAILBOXAGENTS</h3>
+                <p>腾讯/网易企业邮箱品牌代理<br>个性化邮箱定制开发</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 客户案例部分 -->
+    <!-- 首先是通栏+版心的结构，对版心来做相对定位。 -->
+    <div id="client" class="container_fluid">
+        <div class="container">
+            <div class="client_title">
+                <h2>[ 客户案例 ]</h2>
+                <p>With the best professional technology, to design the best innovative web site</p>
+            </div>
+
+            <!-- 项目展示区 -->
+            <ul class="item_list clear" >
+                <li><a href="#">
+                    <img src="./img/20141121095528549.jpg" alt="", title="凯雷奥眼镜">
+                </a></li>
+                <li><a href="#">
+                    <img src="./img/20141121095216750.jpg" alt="", title="凯雷奥眼镜">
+                </a></li>
+                <li><a href="#">
+                    <img src="./img/20141121105856226.jpg" alt="", title="凯雷奥眼镜">
+                </a></li>
+            </ul>
+            <!-- 下面那个view more的按钮部分 -->
+            <div class="item_btn">
+                <a href="#">VIEW MORE</a>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+    <!-- 最新资讯部分 -->
+    <!-- 最主要的是布局 -->
+    <div id="news" class="container">
+        <div class="little_title">
+            <h2>最新资讯</h2>
+            <p>THE LASTEST NEWS</p>
+        </div>
+        <dl>
+            <dt class="l">
+                <img src="./img/xs1.jpg" alt="">
+            </dt>
+            <dd class="l">
+                <ul class="news_list ">
+                    <li>
+                        <div class="news_date l">
+                            <i>18</i>
+                            <span>Aug</span>
+                        </div>
+                        <div class="news_text l">
+                             <h3><a href="#">漳州西恩视觉婚纱摄影网站建设</a></h3>
+                             <p>漳州西恩视觉婚纱摄影隶属西恩视觉文化传播有限公司旗下婚纱摄影品牌，由国内著名摄影师冬晖CHAN...</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="news_date l">
+                            <i>16</i>
+                            <span>Aug</span>
+                        </div>
+                        <div class="news_text l">
+                             <h3><a href="#">网站数据统计用哪种比较好?</a></h3>
+                             <p>网站数据统计代码是平常网站建设过程中最受用户青睐的数据统计工具，几乎每个用户的网站程序都会......</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="news_date l">
+                            <i>14</i>
+                            <span>Aug</span>
+                        </div>
+                        <div class="news_text l">
+                             <h3><a href="#">厦门网站建设服务的内容主要有哪些？?</a></h3>
+                             <p>大多数用户建网站由于都是头一次接触，对于网站建设并不了解，往往会误认为找网站建设公司建网站.........</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="news_date l">
+                            <i>12</i>
+                            <span>Aug</span>
+                        </div>
+                        <div class="news_text l">
+                             <h3><a href="#">海石景观股份有限公司网站设计案例解析?</a></h3>
+                             <p>此次网站整体设计采用扁平化的的风格、简约式排版，网站主视觉区采用大面积的视觉效果图，以动画.........</p>
+                        </div>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <!-- foot部分 -->
+    <div id="foot" class="container_fluid"> 
+        <div class="container">
+            <p class="l">Copyright 2006- 2014 Bowenshangmei Culture All Rights Reserved</p>
+            <div class="r">
+                <a href="#">Home</a>|
+                <a href="#">About</a>|
+                <a href="#">Portfolio</a>|
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

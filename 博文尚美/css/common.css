@@ -1,0 +1,28 @@
+*{margin:0;padding:0;}
+ul{list-style: none;}
+a{text-decoration:none;color:#646464;}
+img{display:block;}
+h1,h2,h3{font-size:16px;}
+body{font-family: Arial;}
+.l{float:left;}
+.r{float:right;}
+.clear:after{content:"";display:block;clear:both;}
+
+.container_fluid{width:100%;}
+.container{width:1080px; margin:0 auto;position: relative;}
+#head{height:81px;}
+#head .logo{width:162px;height:44px;}
+#head .nav_site{font-size:14px;line-height: 81px;}
+#head .nav_site li{float:left;margin-left: 58px;}
+#head .nav_site li a:hover{color: #66c5b4;}
+
+.little_title{margin-top: 60px; text-align: center;}
+.little_title h2{height:20px;line-height:20px;font-size:20px;color:#363636;background:url(../img/titbg.jpg) no-repeat center;font-weight:normal;}
+.little_title p{color:#9F9F9F;font-size:14px;line-height:34px;}
+
+/* foot部分 */
+#foot{background:#66c5b4;}
+#foot .container{height:54px;line-height:54px;}
+#foot p{font-size:12px;color:white;}
+#foot div{color:white;}
+#foot div a{color:white;margin:0 10px;}
