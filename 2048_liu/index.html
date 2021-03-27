@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./common.css">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="./showScore.js"></script>
+    <script src="./displayBoxes.js"></script>
+    <script src="./moveBoxes.js"></script>
+    <script src="./Controller.js"></script>
+    <script src="./checkGames.js"></script>
+</head>
+<body>
+
+
+    <div class="container_fluid">
+        <div class="header">
+            <h1 class="name">Welcome To 2048!</h1>
+            <p class="fen" id="scores">得分: 0</p>
+            <a href="javascript:newgame()">新游戏</a>
+        </div>
+
+
+        <div class="boxes">
+            <ul id="boxess">
+                <li id="r1c1" class="box"></li>
+                <li id="r1c2" class="box"></li>
+                <li id="r1c3" class="box"></li>
+                <li id="r1c4" class="box"></li>
+                <li id="r2c1" class="box"></li>
+                <li id="r2c2" class="box"></li>
+                <li id="r2c3" class="box"></li>
+                <li id="r2c4" class="box"></li>
+                <li id="r3c1" class="box"></li>
+                <li id="r3c2" class="box"></li>
+                <li id="r3c3" class="box"></li>
+                <li id="r3c4" class="box"></li>
+                <li id="r4c1" class="box"></li>
+                <li id="r4c2" class="box"></li>
+                <li id="r4c3" class="box"></li>
+                <li id="r4c4" class="box"></li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+
+<script>
+    //showScore();
+    initBoard();
+    generateNum();
+    generateNum();
+    displayGame();
+    showScore();
+</script>
+</html>
