@@ -1,0 +1,57 @@
+html,body{
+    margin:0;
+    padding:0;
+}
+html{
+    font-size:10px;
+    font-family: "微软雅黑", "sans-serif";
+}
+.bg{
+    width:100vw;
+    height:100vh;
+    background: url(./3.jpg) left center no-repeat;
+    /* background-size：cover表示把背景图像扩展至足够大，以使背景图像完全覆盖背景区域，背景图像的某些部分也许无法显示再背景定位区域中。 */
+    background-size: cover;
+}
+.keys{
+    display: flex;
+    justify-content: center;/* 横向子元素排列的方式*/
+    align-items: center;/* 竖向子元素排列的方式*/
+    min-height: 100vh;
+    /* flex-basis:定义了在分配多余空间之前，项目占据的主轴空间，浏览器根据这个属性，计算主轴是否由多余空间 */
+    /* flex-grow:定义项目的放大比例，如果所有项目的flex-grow属性都为1，则它们将等分剩余空间 */
+    /* felx-shrink:定义了项目的缩小比例 默认值为1 如果空间不足，该项目将缩小 */
+    /*代表flex-grow:1  flex-shrink:1  flex-basis:0%*/
+    flex:1;
+}
+.key{
+    width:12rem;
+    margin:2rem;
+    height:10rem;
+    text-align: center;
+    background-color: burlywood;
+    border-radius: .5rem;
+    border:.5rem blueviolet solid;
+    transition: all .15s ease;
+    text-shadow: 0rem 0rem .5rem red;
+    box-shadow: 0 0 1rem blueviolet;
+}
+kbd{
+    display:block;
+    font-size:3rem;
+    margin-top:2rem;
+    color:white;
+}
+span{
+    font-size:1.5rem;
+    margin-top:2rem;
+    /* 文字转换 */
+    text-transform: uppercase;
+    /* 字母之间的间隔 */
+    letter-spacing: .1rem;
+}
+.playing{
+    transform: scale(1.2);
+    border-color: yellow;
+    box-shadow: 0 0 2rem yellow;
+}
