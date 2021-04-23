@@ -1,176 +1,57 @@
-* {
-  margin: 0;
-  padding: 0;
+html,body{
+    margin:0;
+    padding:0;
 }
-
-html {
-  background: url("../images/bg.jpg") no-repeat;
-  background-size: cover;
-  font: 10px "微软雅黑", "sans-serif";
-  text-align: center;
+html{
+    font-size:10px;
+    font-family: "微软雅黑", "sans-serif";
 }
-
-body {
-  font-size: 2rem;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
+.bg{
+    width:100vw;
+    height:100vh;
+    background: url(./3.jpg) left center no-repeat;
+    /* background-size：cover表示把背景图像扩展至足够大，以使背景图像完全覆盖背景区域，背景图像的某些部分也许无法显示再背景定位区域中。 */
+    background-size: cover;
 }
-
-#clock {
-  background:rgba(255,255,255,0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30rem;
-  height: 30rem;
-  border: 15px solid rgb(97, 166, 206);
-  border-radius: 50%;
-  padding:2rem;
-  /* 可以设置多个box-shadow，阴影的z-index值从左至右依次减小 */
-  box-shadow:
-    0 0 0 4px rgb(194, 97, 186),
-    inset 0 0 0 5px rgb(211, 127, 141),
-    inset 0 0 15px white,
-    0 0 10px red;
-    position: relative;
+.keys{
+    display: flex;
+    justify-content: center;/* 横向子元素排列的方式*/
+    align-items: center;/* 竖向子元素排列的方式*/
+    min-height: 100vh;
+    /* flex-basis:定义了在分配多余空间之前，项目占据的主轴空间，浏览器根据这个属性，计算主轴是否由多余空间 */
+    /* flex-grow:定义项目的放大比例，如果所有项目的flex-grow属性都为1，则它们将等分剩余空间 */
+    /* felx-shrink:定义了项目的缩小比例 默认值为1 如果空间不足，该项目将缩小 */
+    /*代表flex-grow:1  flex-shrink:1  flex-basis:0%*/
+    flex:1;
 }
-
-#clock strong:nth-child(1) {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  margin-left: -13px;
+.key{
+    width:12rem;
+    margin:2rem;
+    height:10rem;
+    text-align: center;
+    background-color: burlywood;
+    border-radius: .5rem;
+    border:.5rem blueviolet solid;
+    transition: all .15s ease;
+    text-shadow: 0rem 0rem .5rem red;
+    box-shadow: 0 0 1rem blueviolet;
 }
-
-#clock strong:nth-child(2) {
-  position: absolute;
-  top: 16.5%;
-  left: 65%;
-  margin-top:-10px;
-  margin-left:10px;
+kbd{
+    display:block;
+    font-size:3rem;
+    margin-top:2rem;
+    color:white;
 }
-#clock strong:nth-child(3) {
-  position: absolute;
-  top: 33%;
-  left: 80%;
-  margin-top:-20px;
-  margin-left:18px;
+span{
+    font-size:1.5rem;
+    margin-top:2rem;
+    /* 文字转换 */
+    text-transform: uppercase;
+    /* 字母之间的间隔 */
+    letter-spacing: .1rem;
 }
-
-#clock strong:nth-child(4) {
-  position: absolute;
-  top: 50%;
-  left: 90%;
-  margin-top: -16px;
-}
-
-#clock strong:nth-child(5) {
-  position: absolute;
-  bottom: 33%;
-  left: 80%;
-  margin-bottom:-15px;
-  margin-left:10px;
-}
-
-#clock strong:nth-child(6) {
-  position: absolute;
-  bottom: 16.5%;
-  left: 65%;
-  margin-left:10px;
-  margin-bottom:-10px;
-}
-
-#clock strong:nth-child(7) {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  margin-left:-5px;
-}
-
-#clock strong:nth-child(8) {
-  position: absolute;
-  bottom: 16.5%;
-  left: 35%;
-  margin-left:-20px;
-  margin-bottom:-10px;
-}
-
-#clock strong:nth-child(9) {
-  position: absolute;
-  bottom: 33%;
-  left: 20%;
-  margin-bottom:-15px;
-  margin-left:-20px;
-}
-
-#clock strong:nth-child(10) {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  margin-top: -16px;
-  margin-left:-10px;
-}
-#clock strong:nth-child(11) {
-  position: absolute;
-  top: 33%;
-  left: 20%;
-  margin-top:-20px;
-  margin-left:-30px;
-}
-
-#clock strong:nth-child(12) {
-  position: absolute;
-  top: 16.5%;
-  left: 35%;
-  margin-top:-10px;
-  margin-left:-30px;
-}
-
-.clock-face {
-  position: relative;
-  width: 85%;
-  height: 85%;
-}
-
-.clock-face .middle {
-  width: 1rem;
-  height: 1rem;
-  background:rgb(97, 166, 206);
-  border-radius: 50%;
-  border: 3px solid rgb(97, 166, 206);
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -8px;
-  margin-top: -10px;
-}
-
-.clock-face .hand {
-  width: 50%;
-  background: rgb(194, 97, 186);
-  position: absolute;
-  top: 50%;
-  margin-top: -6px;
-}
-
-.clock-face .hand {
-  /* 将旋转的原点设置为最右边，以最右点以起点进行顺时针旋转 */
-  transform-origin: 100%;
-  transform: rotate(90deg);
-  transition: all 0.05s linear;
-}
-
-.clock-face .second-hand {
-  height: .1rem;
-}
-
-.clock-face .minute-hand {
-   height: .3rem;
-}
-
-.clock-face .hour-hand {
-  height: .5rem;
+.playing{
+    transform: scale(1.2);
+    border-color: yellow;
+    box-shadow: 0 0 2rem yellow;
 }
