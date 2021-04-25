@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./layout.css">
+    <title>DIY you photo</title>
+</head>
+<body>
+
+    <header>
+        <h1 class="header">DIY you <span>photo</span>!</h1>
+    </header>
+    
+    <div class="controler">
+        <label class="show">边框大小</label>
+        <input type="range",class="border" min="10" max="100" step="10" value="10" name="border" data-size="px">
+        
+        <label class="show">模糊度</label>
+        <input type="range" class="blur" min="0" max="50" name="blur" step="1" value="0" data-size="px">
+        
+        <label class="show">主题颜色</label>
+        <input type="color",class="color" name="base_color" value="blue">
+    
+    </div>
+    <img src="./moutain.jpg" alt="" >
+</body>
+<script src="./change_by_your_self.js"></script>
+</html>

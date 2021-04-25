@@ -1,0 +1,43 @@
+/* 在全局定义CSS变量 */
+:root{
+    --border:20;
+    --blur:0;
+    --base_color:green;
+}
+
+html{
+    padding:0;
+    font-size:10px;
+    margin:0;
+}
+body{
+    background: rgb(59, 59, 110);
+    display: flex;
+    /* 改变主轴的方向为从上至下 */
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size:50px;
+}
+.header span{
+    color:var(--base_color);
+}
+
+.controler{
+    font-size:20px;
+    color:var(--base_color);
+}
+
+img{
+    border-style: solid;
+    margin-top:50px;
+    width:900px;
+    height:600px;
+    filter: blur(var(--blur));
+    /* 使用css变量来设置元素的属性值 */
+    border-width: var(--border);
+    border-color: var(--base_color);
+}
